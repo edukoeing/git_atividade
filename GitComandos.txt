@@ -1,0 +1,125 @@
+
+TI@L61M14 MINGW64 ~
+$ pwd
+/c/Users/TI
+
+TI@L61M14 MINGW64 ~
+$ cd desktop/
+
+TI@L61M14 MINGW64 ~/desktop
+$ mk dir git_atividade
+
+TI@L61M14 MINGW64 ~/desktop/git_atividade
+$ git init
+Initialized empty Git repository in C:/Users/TI/Desktop/git_atividade/.git/
+
+TI@L61M14 MINGW64 ~/desktop/git_atividade (master)
+$
+
+
+TI@L61M14 MINGW64 ~/desktop/git_atividade (master)
+$ git remote add origin https://github.com/edukoeing/git_atividade.git
+
+TI@L61M14 MINGW64 ~/desktop/git_atividade (master)
+$ git remote -v
+origin  https://github.com/edukoeing/git_atividade.git (fetch)
+origin  https://github.com/edukoeing/git_atividade.git (push)
+
+TI@L61M14 MINGW64 ~/desktop/git_atividade (master)
+$ code .
+
+TI@L61M14 MINGW64 ~/desktop/git_atividade (master)
+$ git status
+On branch master
+
+Initial commit
+
+nothing to commit (create/copy files and use "git add" to track)
+
+TI@L61M14 MINGW64 ~/desktop/git_atividade (master)
+$ git add  third.txt
+
+TI@L61M14 MINGW64 ~/desktop/git_atividade (master)
+$ git commit -m "Adicionando third.txt" third.txt
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'TI@L61M14.(none)')
+
+TI@L61M14 MINGW64 ~/desktop/git_atividade (master)
+$ git config --global user.email "eduardo.koeing@gmail.com"
+
+TI@L61M14 MINGW64 ~/desktop/git_atividade (master)
+$ git config --global user.name "edukoeing"
+
+TI@L61M14 MINGW64 ~/desktop/git_atividade (master)
+$ git commit -m "Adicionando third.txt" third.txt
+[master (root-commit) 44feaad] Adicionando third.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 third.txt
+
+TI@L61M14 MINGW64 ~/desktop/git_atividade (master)TI@L61M14 MINGW64 ~/desktop/git_atividade (master)
+$ git add  fourth.txt
+
+TI@L61M14 MINGW64 ~/desktop/git_atividade (master)
+$  git commit -m "Adicionando fourth.txt"
+[master 6a46d5b] Adicionando fourth.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 fourth.txt
+
+TI@L61M14 MINGW64 ~/desktop/git_atividade (master)
+$ git push origin master
+fatal: HttpRequestException encountered.
+   Ocorreu um erro ao enviar a solicita¦¦o.
+Username for 'https://github.com': eduardo.koeing@gmail.com
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 289 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/edukoeing/git_atividade.git
+   44feaad..6a46d5b  master -> master
+
+$ git push origin master
+fatal: HttpRequestException encountered.
+   Ocorreu um erro ao enviar a solicita¦¦o.
+Username for 'https://github.com': edukoeing
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 227 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/edukoeing/git_atividade.git
+ * [new branch]      master -> master
+
+TI@L61M14 MINGW64 ~/desktop/git_atividade (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    third.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+TI@L61M14 MINGW64 ~/desktop/git_atividade (master)
+$ git log
+commit 6a46d5bff2284388a9fb89ea7a6a253ff661c14d (HEAD -> master, origin/master)
+Author: edukoeing <eduardo.koeing@gmail.com>
+Date:   Thu Mar 5 20:27:47 2020 -0300
+
+    Adicionando fourth.txt
+
+commit 44feaad952dd68a7b913e1fa78a623c7d6435166
+Author: edukoeing <eduardo.koeing@gmail.com>
+Date:   Thu Mar 5 20:19:01 2020 -0300
+
+    Adicionando third.txt
+
